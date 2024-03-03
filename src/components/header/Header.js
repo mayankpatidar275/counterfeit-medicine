@@ -27,25 +27,15 @@ function Header() {
     <div>
       <div className={classes.root}>
         <AppBar position="static" style={{ background: "" }}>
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            >
-              <MenuIcon />
-            </IconButton>
+          <Toolbar> 
+            <a style={{textDecoration: "none", color: "inherit"}} href="/">
             <Typography variant="h6" className={classes.title}>
               ANTI-COUNTERFEIT
-            </Typography>
-            <Button href="/signin" color="inherit">
-              Login
-            </Button>
+            </Typography> 
+            </a>
           </Toolbar>
         </AppBar>
-      </div>
-      {/* <Cards /> */}
+      </div> 
     </div>
   );
 }

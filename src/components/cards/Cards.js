@@ -1,214 +1,50 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import { Grid } from "@material-ui/core";
+import Styles from "./cards.module.css" 
 
-import Owner from "../images/admin.jpg";
-import Distributer from "../images/distributor.jpg";
+import Owner from "../images/admin.svg";
 import Supplier from "../images/Supplier.jpg";
 import Manufacturer from "../images/manufactuer1.jpg";
 import Transporter from "../images/transporter1.jpg";
 import Wholesaler from "../images/Wholesaler.jpg";
 
-import SignIn from "../login/SignIn";
 import { BrowserRouter as Router, NavLink } from "react-router-dom";
 
-const useStyles = makeStyles({
-  root1: {
-    maxWidth: 350,
-    marginLeft: 30,
-    marginBottom: 10,
-    marginTop: 10,
-  },
-  root2: {
-    marginTop: 10,
-    marginBottom: 10,
-    maxWidth: 350,
-    marginLeft: 30,
-  },
-  root3: {
-    marginTop: 10,
-    marginBottom: 10,
-    maxWidth: 350,
-    marginLeft: 30,
-  },
-  root4: {
-    marginBottom: 10,
-    maxWidth: 350,
-    marginLeft: 30,
-  },
-  root5: {
-    marginBottom: 10,
-    maxWidth: 350,
-    marginLeft: 30,
-  },
-  root6: {
-    marginBottom: 10,
-    maxWidth: 350,
-    marginLeft: 30,
-  },
-  media: {
-    height: 280,
-    paddingLeft: 20,
-  },
-});
-
-const handleClick = () => {
-  return (
-    <div>
-      <SignIn />
-    </div>
-  );
-};
-function Cards() {
-  const classes = useStyles();
+function Cards() { 
 
   return (
     <Router>
-      <Grid container>
-        <Grid item md={4}>
-          <Card className={classes.root1}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Owner}
-                title="Owner"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  ADMIN
-                </Typography>
-                {/* <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
-              </Typography> */}
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/owner" size="small" color="primary">
-                {" "}
-                Click Here{" "}
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
 
-        <Grid item md={4}>
-          <Card className={classes.root2}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Supplier}
-                title="Supplier"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Supplier
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/supplier" size="small" color="primary">
-                Click Here
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+      <div className={Styles.container}>
+        <div>
+          <a href="./owner">
+            <div className={`${Styles.nav_item} ${Styles.admin}` }>
+              <img src={Owner} alt="Admin" />
+              <div>Admin</div>
+            </div>
+          </a>
+        </div>
+        <div className={Styles.entities}>
+        <a href="/supplier"> <div className={Styles.nav_item}>
+          <img src={Supplier} alt="Supplier" />
+          <div>Supplier</div>
+        </div></a>
+        <a href="/transporter"><div className={Styles.nav_item}>
+          <img src={Transporter} alt="Transporter" />
+          <div>Transporter</div>
+        </div></a>
+        <a href="/manufacturer"><div className={Styles.nav_item}>
+          <img src={Manufacturer} alt="Manufacturer" />
+          <div>Manufacturer</div>
+        </div></a>
+        <a href="/wholesaler"><div className={Styles.nav_item}>
+          <img src={Wholesaler} alt="Wholesaler" />
+          <div>Wholesaler</div>
+        </div></a>
+        </div>
+        
 
-        <Grid item md={4}>
-          <Card className={classes.root3}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Transporter}
-                title="Transporter"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Transporter
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/transporter" size="small" color="primary">
-                Click Here
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <br />
-        <Grid item md={4}>
-          <Card className={classes.root4}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Manufacturer}
-                title="Manufacturer"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Manufacturer
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/manufacturer" size="small" color="primary">
-                Click Here
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid item md={4}>
-          <Card className={classes.root5}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Wholesaler}
-                title="Wholesaler"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Wholesaler
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/wholesaler" size="small" color="primary">
-                Click Here
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-
-        <Grid item md={4}>
-          <Card className={classes.root6}>
-            <CardActionArea>
-              <CardMedia
-                className={classes.media}
-                image={Distributer}
-                title="Distributor"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Distributor
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button href="/distributor" size="small" color="primary">
-                Click Here
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      </Grid>
+      </div>
+       
     </Router>
   );
 }

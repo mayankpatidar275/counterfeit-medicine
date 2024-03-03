@@ -15,7 +15,7 @@ export default function Loader() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={{  width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
       <CircularProgress color="secondary" />
     </div>
   );

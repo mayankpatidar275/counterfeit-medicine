@@ -184,7 +184,9 @@ import Navbar from "../../main_dashboard/components/Navbars/Navbar";
 import Sidebar from "../../main_dashboard/components/Sidebar/Sidebar.js";
 
 import styles from "../../main_dashboard/assets/jss/material-dashboard-react/layouts/adminStyle.js";
+// import bgImage from "../../main_dashboard/assets/img/sidebar-2.jpg";
 import bgImage from "../../main_dashboard/assets/img/sidebar-2.jpg";
+
 import logo from "../../main_dashboard/assets/img/reactlogo.png";
 
 import Dashboard from "@material-ui/icons/Dashboard";

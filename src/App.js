@@ -131,8 +131,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={Landing} />
-            <Route exact path="/signup" component={SignUp} />
-            <Route path="/signin" component={SignIn} />
+            {/* <Route exact path="/signup" component={SignUp} />
+            <Route path="/signin" component={SignIn} /> */}
 
             <Route path="/owner" render={(props) => (<Owner account={this.state.account} supplyChain={this.state.supplyChain} web3={this.state.web3} />)} />
             {/* <Route exact path="/owner/add-new-user" component={(() => <AddNewUser account={this.state.account} supplyChain={this.state.supplyChain} web3={this.state.web3} />)} />
@@ -212,3 +212,4 @@ export default App;
 // 0xCBD93Cc5B60921b68C1E74715a900e46e5470360 DISTRIBUTOR: 5
 
 // 0x78151b00bf6ceD1f43F59650F57063D814c064dA Material id
+// 0xF123157e4Dfc98BA94D790c2F8A871FF9AbE4D61 Medicine id
